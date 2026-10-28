@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head><title>Student Registration</title></head>
+<body style="font-family:Arial;max-width:480px;margin:40px auto">
+  <h2>Student Registration App</h2>
+  <form method="post">
+    Name <input name="name" required>
+    Roll No <input name="roll" required>
+    <button type="submit">Register</button>
+  </form>
+  <h3>Registered students ({{ students|length }})</h3>
+  <ul>{% for s in students %}<li>{{ s.roll }} - {{ s.name }}</li>{% endfor %}</ul>
+</body>
+</html>
